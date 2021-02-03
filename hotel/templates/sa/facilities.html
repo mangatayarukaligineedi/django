@@ -1,0 +1,36 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} facilities {% endblock %}
+{% block content %}
+<div class="container col-md-8">
+	<center><h1 style="font-family:lucida; font-style: italic; color:green; padding-top: 9px"><u>Facilities:</u></h1></center>
+	<div class="card-deck mt-5 mb-5">
+	<div class="card p-5" style="width:20rem;border-color: green;">
+		<img src="{% static 'images/wifi.png' %}" height="200px" width="80px" class="card-img-top">
+		<div class="card-body">
+			<h4 class="card-subtitle">Free WiFi</h4>
+		</div>
+	</div>
+	<div class="card p-5" style="width:20rem;border-color: green">
+		<img src="{% static 'images/laundry.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h4 class="card-subtitle">Laundry Service(pay)</h4>
+		</div>
+	</div>
+	<div class="card p-5" style="width:20rem;border-color: green">
+		<img src="{% static 'images/food.jpg' %}" height="200px" width="80px" class="card-img-top">
+		<div class="card-body">
+			<h4 class="card-subtitle">Food(pay)</h4>
+		</div>
+	</div>
+	</div>
+	<ul>
+		<li><h5>Free WiFi in all areas.</li>
+		<li><h5>Free parking are available.</li>
+		<li><h5>Air-conditioned rooms come with a flat-screen TV and personal safe.</li>
+		<li><h5>Private bathrooms are equipped with a shower.</li>
+		<li><h5>Laundry services and luggage storage are also available.</li>
+		<li><h5>A fine dining restaurant where guests can enjoy food with a panoramic view.</li>
+	</ul>
+</div>
+{% endblock %}

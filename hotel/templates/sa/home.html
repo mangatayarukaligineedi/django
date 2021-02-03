@@ -1,0 +1,56 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container col-md-9">
+	<center><h1 style="font-family:lucida; font-style: italic; color:green;"><b><u>Welcome to Holiday Inn</u></b></h1></center>
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+  		<ul class="carousel-indicators">
+    		<li data-target="#demo" data-slide-to="0" class="active"></li>
+    		<li data-target="#demo" data-slide-to="1"></li>
+    		<li data-target="#demo" data-slide-to="2"></li>
+  		</ul>
+  		<!-- The slideshow -->
+  		<div class="carousel-inner">
+    		<div class="carousel-item active">
+      			<img src="{% static 'images/2.jpg' %}" class="rounded" alt="No image" width="800" height="400">
+    		</div>
+    		<div class="carousel-item">
+      			<img src="{% static 'images/3.jpg' %}" class="rounded" alt="No image" width="800" height="400">
+    		</div>
+    		<div class="carousel-item">
+      			<img src="{% static 'images/4.jpg' %}" class="rounded" alt="No image" width="800" height="400">
+    		</div>
+  		</div>
+  		<!-- Left and right controls -->
+ 		 <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    		<span class="carousel-control-prev-icon"></span>
+  		</a>
+  		<a class="carousel-control-next" href="#demo" data-slide="next">
+    		<span class="carousel-control-next-icon"></span>
+  		</a>
+	</div>
+		<p><h5>Hotel Holiday Resort is located on Chakratirtha Road, just 0.6 mi from Puri Railway Station. An outdoor pool, 2 dining options, free WiFi in all areas and free parking are available. The property also has a private beach area.Featuring wooden furnishings, all the air-conditioned rooms come with a flat-screen TV and personal safe. Some rooms enjoy views of the sea. Private bathrooms are equipped with a shower.
+
+		Hotel Holiday Resort is 1.9 mi from Jagannath Temple and 37 mi from Biju Patnaik International Airport.
+		Guests can make use of the meeting room facilities, or arrange day trips at the tour desk. Laundry services and luggage storage are also available. A pampering spa can be enjoyed at Lemonde Spa.
+
+		Dining options include Fusion, a fine dining restaurant where guests can enjoy food with a panoramic view. Gajapati is a multi-cuisine restaurant. Guests can enjoy scrumptious pastries, cakes and other baked elements at Bakers Boutique.
+		Couples in particular like the location – they rated it 8.6 for a two-person trip.
+		We speak your language!</h5></p>
+    <div class="image">
+		  <img src="{% static 'images/1.jpg' %}" class="rounded pt-3" height="400px" width="800px">
+	  </div>
+  <marquee style="direction-left;">
+	<img src="images/a1.jpg" alt="no image" height="98px" width="120px">
+	<img src="images/a2.png" alt="no image" height="98px" width="120px">
+	<img src="images/a3.jpg" alt="no image" height="98px" width="120px">
+	<img src="images/a4.jpg" alt="no image" height="98px" width="120px">
+	<img src="images/a5.jpg" alt="no image" height="98px" width="120px">
+	<img src="images/a6.png" alt="no image" height="98px" width="120px">
+	<img src="images/a7.png" alt="no image" height="98px" width="120px">
+	<img src="images/a8.jpg" alt="no image" height="98px" width="120px">
+	</marquee>
+</div>
+{% endblock %}

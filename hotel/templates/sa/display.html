@@ -1,0 +1,38 @@
+{% extends 'sa/base.html' %}
+{% block title %}Room List{% endblock %}
+{% block content %}
+<div class="container col-md-9 mt-4">
+	<div class="jumbotron border rounded">
+		<h2 class="p-3 text-white text-center bg-info border rounded mx-1 my-2">Rooms List<span>
+		<!-- <a href="{% url 'stdtrg' %}" class="btn btn-success" style="float:right;">Add Room</a> --> 
+		</span></h2>
+		<table border="1" width="100%" class="table table-bordered table-hover col-md-12 mx-12">
+			<tr class="bg-dark text-white border rounded">
+				<th>S.no</th>
+				<th>Room Number</th>
+				<th>Room Type</th>
+				<th>Room_image</th>
+				<th>Category</th>
+				<th>Cost</th>
+				<th>Action</th>
+			</tr>
+			{% for i in u %}
+			<tr>
+				<td>{{forloop.counter}}</td>
+				<td>{{i.number}}</td>
+				<td>{{i.room_type}}</td>
+				<td><center><img src="{{i.image.url}}" width="40%" class="rounded"></center></td>
+				<td>{{i.category}}</td>
+				<td>{{i.cost}}</td>
+				<td>
+				<a href="{% url 'vw' i.id %}" class="btn btn-primary">Info</a>
+				<!-- <a href="{% url 'updf' i.id %}" class="btn btn-warning">Edit</a>
+				<a href="{% url 'dltu' i.id %}" class="btn btn-danger">Delete</a> -->
+				<!-- <a href="{% url 'bkrm' %}" class="btn btn-success">Book</a> -->
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}

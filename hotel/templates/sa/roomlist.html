@@ -1,0 +1,22 @@
+{% extends 'sa/base.html' %}
+{% block title %}Room List{% endblock %}
+{% block content %}
+<div class="container col -md-6">
+		<div class="card mt-4 shadow-md">
+			<h2 class="p-3 bg-primary text-light m-3 border rounded text-center">Room List</h2>
+			<form class="p-3 mx-3 mb-3 border rounded" style="background-color:cadetblue;" method="post">
+				{% csrf_token %}
+				<input type="text" name="n" class="form-control" placeholder="Room number" required><br>
+
+				<input name="rty" class="form-control" placeholder="Room type" required><br>
+
+
+				<input name="ca" class="form-control" placeholder="Category" required><br>
+
+				<input type="number" name="cb" class="form-control" placeholder="Cost" required><br>
+				
+				<input type="submit" name="submit" class="btn btn-block btn-success">
+			</form>
+		</div>
+	</div>
+{% endblock %}

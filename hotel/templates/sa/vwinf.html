@@ -1,0 +1,16 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+	<div class="container col-md-7">
+		<div class="jumbotron mt-3"><center>
+			<h2>{{vi.number}} Room Details</h2>
+			<img src="{{vi.image.url}}" width="50%" class="rounded">
+			<h5>Room Number : <b>{{vi.number}} </b></h5>
+			<h5>Room Type : <b>{{vi.room_type}} </b></h5>
+			<h5>Category : <b>{{vi.category}} </b></h5>
+			<h5>Cost : <b>{{vi.cost}} </b></h5></center>
+		</div>
+		<a href="{% url 'ds' %}" class="btn btn-primary">Back</a>
+	</div>
+{% endblock %}

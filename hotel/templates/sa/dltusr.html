@@ -1,0 +1,16 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+	<div class="container col-md-6">
+		<div class="card mt-5">
+			<h2 class="bg-danger text-light mx-4 my-2 text-center border rounded">Delete room</h2>
+			<form method="POST" class="mx-4 my-2">
+				{% csrf_token %}
+				Are You Sure you Want To Delete ?
+				<input type="submit" name="Confrim" class="btn btn-success" value="Confrim">
+				<a href="{% url 'ds' %}" class="btn btn-primary">Cancel</a>
+			</form>
+		</div>
+	</div>
+	{% endblock %}

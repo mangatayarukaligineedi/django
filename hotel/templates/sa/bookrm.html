@@ -1,0 +1,32 @@
+{% extends 'sa/base.html' %}
+{% block title %} Booking Details {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-7 mt-2 mx-auto">
+		<h2 class="bg-warning text-white text-center mx-2 my-2 p-2">Enter details</h2>
+		<div class="card-body">
+			<form method="POST">
+				{% csrf_token %}
+				<input name="r" class="form-control" placeholder="Room number" required><br>
+
+				<input type="date" name="f" class="form-control" placeholder="From Date" required><br>
+
+				<input type="date" name="t" class="form-control" placeholder="To Date" required><br>
+
+				<input name="p" class="form-control" placeholder="People" required><br>
+
+				<!-- <table class="table table borderless">
+					{% for n in d %}
+					<tr>
+						<td>
+							{{n}}
+						</td>
+					</tr>
+					{% endfor %}
+				</table> -->
+				<input type="submit" name="Book" class="btn btn-block btn-success">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

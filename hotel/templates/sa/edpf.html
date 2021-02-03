@@ -1,0 +1,21 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+	<div class="container col-md-6">
+		<div class="card mt-4">
+			<h2 class="bg-primary text-white mx-2 my-2 p-3 border rounded">Edit Details</h2>
+			<form method="POST" enctype="multipart/form-data" class="p-2 mx-2 my-1">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for y in k %}
+					<tr>
+						<td>{{y}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<input type="submit" class="btn btn-warning btn-block" name="update">
+			</form>
+		</div>
+	</div>
+{% endblock %}

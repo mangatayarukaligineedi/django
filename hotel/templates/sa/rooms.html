@@ -1,0 +1,92 @@
+{% extends 'sa/base.html' %}
+{% load static %}
+{% block title %} Rooms {% endblock %}
+{% block content %}
+<div class="container">
+	{% if messages %}
+	{% for k in messages %}
+	<div class="alert alert-{{k.tags}} alert-dismissible">
+  		<button type="button" class="close" data-dismiss="alert">&times;</button>{{k}}
+  	</div>
+	{% endfor %}
+	{% endif %}
+	<div class="card-deck mt-5 mb-5">
+	<div class="card" style="width:20rem;border-color: red;">
+		<img src="{% static 'images/r1.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Single Bed</h2>
+			<h4 class="card-subtitle">Cost:1200/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r2.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Single bed</h2>
+			<h4 class="card-subtitle">Cost:1200/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r5.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Suit</h2>
+			<h4 class="card-subtitle">Cost:1800/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	</div>
+	<div class="card-deck mb-5">
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r4.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Double Bed</h2>
+			<h4 class="card-subtitle">Cost:1500/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r3.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Triple Bed</h2>
+			<h4 class="card-subtitle">Cost:1700/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r6.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Triple Bed</h2>
+			<h4 class="card-subtitle">Cost:1700/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	</div>
+	<div class="card-deck mt-5">
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r7.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Triple Bed</h2>
+			<h4 class="card-subtitle">Cost:1700/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r8.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Suit</h2>
+			<h4 class="card-subtitle">Cost:1900/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border-color: red">
+		<img src="{% static 'images/r9.jpg' %}" height="250px" width="100px" class="card-img-top">
+		<div class="card-body">
+			<h2 class="card-title">Double Bed</h2>
+			<h4 class="card-subtitle">Cost:1500/-</h4>
+			<a class="btn btn-primary" href="#">Book Room</a>
+		</div>
+	</div>
+	</div>
+</div>
+{% endblock %}
